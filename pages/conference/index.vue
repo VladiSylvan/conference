@@ -4,23 +4,10 @@
               @show-side-bar="showSideBar"
               @hide-side-bar="hideSideBar"
               :modal-component="component" />
-    <div v-if="$route.name === 'share-screen'"
-         class="conference-call-wrapper">
 
-      <div class="shared-screen">
-        <div @click="$router.push({name: 'conference'})"
-             class="conference-call-back">
-          <icon class="angle-left-icon"
-                name="angle-left"
-                scale="1.5" />
-          <span> Back To Conference</span>
-        </div>
-        <img class="user-video"
-             src="../../assets/ben-unsplash.jpg"
-             alt="">
-      </div>
-    </div>
-    <div v-else-if="$route.name === 'video-conference'"
+    <share-screen v-if="confComponent === 'shareScreen'" />
+
+    <div v-else-if="confComponent === 'videoConf'"
          class="conference-video-call-wrapper">
       <div class="user-wrapper">
         <div class="icon-body mobile mobile-video-icon">
@@ -128,6 +115,7 @@ export default {
   name: 'conference-call',
   components: {
     SideBar: () => import('../../components/ConferenceCall/SideBar.vue'),
+    ShareScreen: () => import('../../components/ConferenceCall/ShareScreen.vue'),
     SpeakerCard: () => import('../../components/ConferenceCall/SpeakerCard.vue'),
     ModalComponent: () => import('../../components/ModalComponent.vue'),
     DeleteModal: () => import('../../components/ConferenceCall/DeleteModal.vue'),
@@ -138,6 +126,7 @@ export default {
     ConferenceCallButton: () => import('../../components/app/ConferenceCallButton.vue')
   },
   data: () => ({
+    currentComponent: null,
     welcomeModal: true,
     component: '',
     showModal: false,
@@ -174,6 +163,14 @@ export default {
     },
     hideSideBar () {
       this.hideSpeakers = false
+    }
+  },
+  computed: {
+    shareScreen () {
+      return this.$store.state.conference.shareScreen
+    },
+    confComponent () {
+      return this.$store.state.conference.confComponent
     }
   }
 

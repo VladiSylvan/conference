@@ -31,6 +31,7 @@ const createStore = () => {
     state: {
       api: "http://54.39.98.190:8000",
       user: null,
+      token: null,
       authError: null,
       states: null,
       payments: null,
@@ -38,10 +39,12 @@ const createStore = () => {
       areaCode: null
     },
     mutations: {
+      updateUser(state, data) {
+        state.user = data || null;
+      },
       authToken(state, token) {
-        token
-          ? authToken(token)
-          : authToken(window.localStorage.getItem("token"));
+        authToken(token);
+        state.token = token;
       },
       catchError(state, error) {
         if (error.response === undefined) {
@@ -92,7 +95,20 @@ const createStore = () => {
           });
       }
     },
-    actions: {}
+    actions: {
+      nuxtClient({ commit }) {
+        if (!window.localStorage) return;
+        const user = window.localStorage.user;
+        const token = window.localStorage.token;
+        const data = {
+          user: user ? JSON.parse(user) : undefined,
+          token: token
+        };
+        // authToken(data.token);
+        commit("authToken", token);
+        commit("updateUser", data.user);
+      }
+    }
   });
 };
 export default createStore;

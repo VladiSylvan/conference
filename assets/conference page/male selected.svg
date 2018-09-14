@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>male</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Conference-Call-Page-Viewers" transform="translate(-14.000000, -270.000000)" fill-rule="nonzero" stroke="#2E7EED">
+            <g id="right-navigation" transform="translate(0.000000, 59.000000)">
+                <g id="male" transform="translate(15.000000, 212.000000)">
+                    <path d="M12.47375,13.3425741 C11.9802232,13.2652106 11.9689732,11.9282616 11.9689732,11.9282616 C11.9689732,11.9282616 13.4191518,10.5139051 13.7352232,8.61201389 C14.5854464,8.61201389 15.110625,6.59005324 14.2602232,5.87865278 C14.2958482,5.12978009 15.353125,0 10,0 C4.64683036,0 5.70424107,5.12978009 5.73964286,5.87865278 C4.88933036,6.59005324 5.41441964,8.61201389 6.2646875,8.61201389 C6.58071429,10.5139051 8.0309375,11.9282616 8.0309375,11.9282616 C8.0309375,11.9282616 8.0196875,13.2652106 7.52616071,13.3425741 C5.93642857,13.5917731 0,16.171375 0,19 L10,19 L20,19 C20,16.171375 14.0635268,13.5917731 12.47375,13.3425741 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

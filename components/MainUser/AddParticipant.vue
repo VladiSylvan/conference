@@ -13,6 +13,7 @@
       </div>
       <input @keyup.enter="addParticipant"
              v-model="newParticipant"
+             :class="{'is-invalid': errors.has('email')}"
              autocomplete='email'
              v-validate="'required|email'"
              name="email"
@@ -60,7 +61,9 @@ export default {
       this.$emit('close-schedule')
     },
     action () {
-      this.$store.commit('postConferenceEmailInvite', {emails: this.participants, conferenceId: this.$route.params.conferenceId})
+      this.$store.dispatch('postConferenceEmailInvite', {emails: this.participants, conferenceId: this.$route.query.id}).then( () => {
+        this.outside()
+      })
     }
   },
   computed: {

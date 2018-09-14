@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="12px" viewBox="0 0 11 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Transcription" transform="translate(-1104.000000, -153.000000)" fill="#BBBBBB" fill-rule="nonzero">
+            <g id="actions" transform="translate(919.000000, 151.000000)">
+                <g id="download-button" transform="translate(85.000000, 0.000000)">
+                    <g id="down-arrow" transform="translate(100.000000, 2.000000)">
+                        <path d="M10.9798405,6.65225744 C10.9389434,6.55879665 10.8435086,6.49780933 10.7376038,6.49780933 L7.86485187,6.49780933 L7.86485187,0.249923854 C7.86485187,0.111970198 7.74739556,0 7.60268269,0 L3.40809868,0 C3.26338582,0 3.1459295,0.111970198 3.1459295,0.249923854 L3.1459295,6.49783276 L0.262166825,6.49783276 C0.156261978,6.49783276 0.0608271856,6.55882008 0.0199300714,6.65178885 C-0.0204509133,6.74524964 0.00157060968,6.85272135 0.0765568449,6.92420515 L5.30666856,11.9265247 C5.35594663,11.9735011 5.42255191,12 5.49227854,12 C5.56200517,12 5.62861045,11.9735011 5.67788852,11.9270167 L10.9232138,6.92469717 C10.9982,6.85318994 11.0207377,6.74574166 10.9798405,6.65225744 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

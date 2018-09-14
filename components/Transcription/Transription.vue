@@ -13,9 +13,9 @@
       </div>
       <div v-if="transcription.mark"
            class="mark-header">
-        <icon scale="1.25"
-              class="map-pin-icon"
-              name="map-pin" />
+        <img src="../../assets/transcription page/mark.svg"
+             class="map-pin-icon"
+             alt="">
         <span>{{transcription.mark_id}}</span>
       </div>
     </div>

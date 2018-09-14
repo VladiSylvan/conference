@@ -7,15 +7,17 @@
         <button @click="$emit('use-phone')"
                 style="margin-right: 30px;">
           <div class="welcome-button">
-            <icon class="modal-icon"
-                  name="phone" />
+            <img class="modal-icon"
+                 src="../../assets/conference page/phone-receiver.svg"
+                 alt="">
             <span>my phone</span>
           </div>
         </button>
         <button @click="$emit('use-pc')">
           <div class="welcome-button">
-            <icon class="modal-icon"
-                  name="desktop" />
+            <img class="modal-icon"
+                 src="../../assets/conference page/desktop-monitor.svg"
+                 alt="">
             <span>my computer</span>
           </div>
         </button>

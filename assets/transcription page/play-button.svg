@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="18px" viewBox="0 0 13 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Transcription" transform="translate(-227.000000, -118.000000)" fill="#2E7EED" fill-rule="nonzero">
+            <g id="controls" transform="translate(175.000000, 115.000000)">
+                <g id="play-button" transform="translate(52.000000, 3.000000)">
+                    <path d="M12.8188387,8.6470588 L0.657548387,0.0754222633 C0.528806452,-0.0150085021 0.361903226,-0.0244373023 0.224354839,0.0488501901 C0.0863870968,0.122994846 0,0.268712667 0,0.428145107 L0,17.5714182 C0,17.7308506 0.0863870968,17.876997 0.224354839,17.9511417 C0.285580645,17.9837139 0.352677419,18 0.419354839,18 C0.502806452,18 0.58583871,17.9742851 0.657548387,17.924141 L12.8188387,9.35250448 C12.9324839,9.27235968 13,9.14078506 13,8.99978164 C13,8.85877822 12.9320645,8.7272036 12.8188387,8.6470588 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

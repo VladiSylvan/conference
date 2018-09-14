@@ -1,15 +1,16 @@
 <template>
   <div class="container">
-    <icon name="phone"
-          class="icon" />
-    <p class="header">Free Conference Calls</p>
-    <p class="description">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus</p>
+    <img class="icon"
+         :src="featureData.icon"
+         alt="">
+    <p class="header">{{featureData.title}}</p>
+    <p class="description">{{featureData.content}}</p>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: ['feature-data']
 }
 </script>
 
@@ -33,9 +34,6 @@ export default {
   margin: 0;
 }
 .icon {
-  color: #2e7eed;
-  width: 26px;
-  height: 26px;
   margin-bottom: 17px;
 }
 .header {

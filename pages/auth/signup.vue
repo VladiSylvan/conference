@@ -56,14 +56,28 @@
              placeholder="Password">
       <span v-show="errors.has('password')"
             class="help is-danger">{{ errors.first('password') }}</span>
-
-      <div class="login-keep">
-        <router-link :to="{name: 'auth-login'}">Sign In</router-link>
-      </div>
-      <button type="submit">Sign Up</button>
+      <button class="register"
+              type="submit">Register</button>
       <span v-if="authError !== null"
             style="margin-top: 15px; margin-bottom: -15px"
             class="help is-danger">{{ authError }}</span>
+      <button class="facebook">
+        <div class="login-button">
+          <span>sign in with facebook</span>
+          <icon scale="1.5"
+                name="facebook" />
+        </div>
+      </button>
+      <button class="google">
+        <div class="login-button">
+          <span>sign in with google</span>
+          <icon scale="1.5"
+                name="google-plus" />
+        </div>
+      </button>
+      <div class="login-keep">
+        <router-link :to="{name: 'auth-login'}">Already have an account?</router-link>
+      </div>
     </form>
   </div>
 </template>
@@ -143,7 +157,6 @@ export default {
     flex-direction: column !important;
     align-items: center !important;
     margin-bottom: 4% !important;
-    padding-bottom: 0px !important;
   }
   .container .login {
     margin-left: 0 !important;
@@ -186,10 +199,6 @@ export default {
   .container .sign-in .google {
     width: 100% !important;
   }
-  .container .login button {
-    margin-bottom: 0px !important;
-    margin-bottom: 27px !important;
-  }
 }
 .container {
   margin-left: auto;
@@ -199,7 +208,7 @@ export default {
   width: fit-content;
   background-color: #ffffff;
   display: flex;
-  padding-bottom: 81px;
+  padding-bottom: 36px;
 }
 .container .line {
   margin-top: 16px;
@@ -261,7 +270,7 @@ export default {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
-  margin-bottom: 21px;
+  margin-top: 16px;
 }
 .container .login .login-keep input {
   margin-right: 7px;
@@ -276,5 +285,43 @@ export default {
   font-weight: bold;
   line-height: 15px;
   text-transform: uppercase;
+}
+.container .login .facebook {
+  margin-bottom: 15px;
+  height: 42px;
+  width: 280px;
+  background-color: #3b5998;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.container .login .facebook span {
+  margin-top: 5px;
+  margin-right: 6px;
+}
+.container .login .google {
+  height: 42px;
+  width: 280px;
+  background-color: #d34836;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.container .login .google span {
+  margin-top: 3px;
+  margin-right: 6px;
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+}
+.register {
+  margin-bottom: 36px;
 }
 </style>

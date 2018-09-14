@@ -167,7 +167,7 @@ export default {
   width: fit-content;
   background-color: #ffffff;
   display: flex;
-  padding-bottom: 81px;
+  padding-bottom: 46px;
 }
 .container .line {
   margin-top: 16px;
@@ -190,8 +190,9 @@ export default {
   flex-direction: column;
 }
 .container .login .login-header {
+  text-align: center;
   margin-top: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   color: #878787;
   font-family: "Helvetica Neue";
   font-size: 24px;

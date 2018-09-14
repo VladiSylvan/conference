@@ -2,7 +2,9 @@
   <div v-click-outside="outside"
        class="container">
     <p class="header">Share Screen</p>
-    <div class="icon"></div>
+    <img src="../../assets/Share screen logo.svg"
+         class="icon"
+         alt="">
     <p class="body">Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis </p>
     <button @click="shareScreen"
             class="share">share screen</button>
@@ -16,7 +18,7 @@ export default {
       this.$emit('close-schedule')
     },
     shareScreen () {
-      this.$router.push({name: 'share-screen'})
+      this.$store.commit("confComponent", "shareScreen")
       this.$emit('share-screen')
     }
   }
@@ -59,9 +61,6 @@ export default {
 }
 .icon {
   margin-bottom: 24px;
-  height: 74px;
-  width: 74px;
-  background-color: #bbb;
 }
 .body {
   margin-bottom: 30px;

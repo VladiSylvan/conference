@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="29px" viewBox="0 0 38 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>remove</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Conference-Call-Page" transform="translate(-559.000000, -278.000000)">
+            <g id="speakers" transform="translate(78.000000, 93.000000)">
+                <g id="speaker" transform="translate(298.000000, 45.000000)">
+                    <g id="remove" transform="translate(183.000000, 140.000000)">
+                        <g id="Group" transform="translate(11.000000, 0.000000)">
+                            <circle id="Oval-Copy-6" fill="#D54747" cx="7.5" cy="7.5" r="7.5"></circle>
+                            <g id="cross" transform="translate(5.000000, 5.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                <path d="M2.94597826,2.5 L4.96731622,0.478794008 C5.01082436,0.435233761 5.01082436,0.364652466 4.96731622,0.321092219 L4.67903524,0.032657017 C4.65812394,0.0117986642 4.62968035,0 4.60013063,0 C4.57052823,0 4.54213732,0.0117986642 4.52122602,0.032657017 L2.49994074,2.05391568 L0.478655461,0.032657017 C0.436780186,-0.00921770642 0.362668851,-0.00916503382 0.320898923,0.032657017 L0.0326706154,0.321092219 C-0.0108902051,0.364652466 -0.0108902051,0.435233761 0.0326706154,0.478794008 L2.0539559,2.5 L0.0326706154,4.52120599 C-0.0108902051,4.56476624 -0.0108902051,4.63534753 0.0326706154,4.67890778 L0.320951596,4.96734298 C0.341862897,4.98820134 0.370253806,5 0.399856202,5 C0.429458597,5 0.457796834,4.98820134 0.478708135,4.96734298 L2.49999342,2.94608432 L4.5212787,4.96734298 C4.54219,4.98820134 4.57063358,5 4.6001833,5 C4.62973303,5 4.65817661,4.98820134 4.67908791,4.96734298 L4.96736889,4.67890778 C5.01087704,4.63534753 5.01087704,4.56476624 4.96736889,4.52120599 L2.94597826,2.5 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                        <text id="REMOVE" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="9" font-weight="400" fill="#D54747">
+                            <tspan x="0" y="28">REMOVE</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

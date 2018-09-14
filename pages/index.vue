@@ -126,11 +126,8 @@ export default {
   margin-bottom: 159px;
 }
 .header-container {
-  background: linear-gradient(
-      rgb(116, 116, 116, 0.74),
-      rgb(116, 116, 116, 0.74)
-    ),
-    url("../assets/bussnesswoman.jpg"), center no-repeat;
+  background: linear-gradient(rgb(116, 116, 116, 0.1), rgb(116, 116, 116, 0.1)),
+    url("../assets/homepage/img/banner-picture.jpg"), center no-repeat;
   background-size: cover;
   vertical-align: middle;
   object-fit: cover;

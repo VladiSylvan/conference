@@ -3,15 +3,15 @@
     <div class="description">
       <div class="header">
         <div class="icon">
-          <icon name="phone"
-                scale="1.25" />
+          <img src="../../assets/conference page/phone-receiver.svg"
+               alt="">
         </div>
         <p>Lorem Ipsum Dolor Set Mit</p>
       </div>
       <p class="description-body">Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent </p>
       <button>START NOW</button>
     </div>
-    <img src="../../assets/ben-unsplash.jpg"
+    <img src="../../assets/homepage/img/macbook-picture.svg"
          class="image" />
   </div>
 </template>
@@ -94,7 +94,6 @@ export default {
 }
 .image {
   max-width: 556.47px;
-  background-color: aquamarine;
   height: 100%;
 }
 .header {

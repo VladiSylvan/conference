@@ -1,9 +1,8 @@
 const nodeExternals = require("webpack-node-externals");
 module.exports = {
-  mode: "spa",
-  // router: {
-  //   middleware: ["check-auth", "authenticated"]
-  // },
+  router: {
+    middleware: ["check-auth", "authenticated"]
+  },
   /*
   ** Headers of the page
   */

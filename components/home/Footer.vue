@@ -2,15 +2,19 @@
   <div class="container">
     <div class="header">
       <div class="title">
-        <icon class="header-icon"
-              name="phone" />
-        <p>Dida Conference</p>
+        <img src="../../assets/e-mail tamplates/logo.png"
+             class="header-icon"
+             alt="">
       </div>
       <div class="socials">
-        <icon name="phone" />
-        <icon name="phone" />
-        <icon name="phone" />
-        <icon name="phone" />
+        <img src="../../assets/homepage/icons/Facebook_White.svg"
+             alt="">
+        <img src="../../assets/homepage/icons/Google +_White.svg"
+             alt="">
+        <img src="../../assets/homepage/icons/LinkedIN_White.svg"
+             alt="">
+        <img src="../../assets/homepage/icons/Twitter_White.svg"
+             alt="">
       </div>
     </div>
     <div class="wrapper">
@@ -79,6 +83,8 @@ export default {
 }
 .header-icon {
   margin-right: 10px;
+  width: 153px;
+  height: 21px;
 }
 .socials {
   color: #ffffff;

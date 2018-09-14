@@ -1,4 +1,6 @@
 import axios from "axios";
+// import Cookie from "js-cookie";
+const Cookie = process.browser ? require("js-cookie") : undefined;
 // initial state
 const state = {};
 
@@ -7,22 +9,12 @@ const getters = {};
 
 // actions
 const actions = {
-  getUserFromLocalStorage({ state, commit, rootState }) {
-    if (window.localStorage.getItem("user") !== null) {
-      commit("setUser", JSON.parse(window.localStorage.getItem("user")));
-      commit("authToken", window.localStorage.getItem("token"));
-    } else {
-      this.$router.push({ name: "auth-login" });
-    }
-  },
-
   register({ state, commit, rootState }, user) {
     axios
       .post(rootState.api + "/auth/register", user)
       .then(response => {
-        commit("setUser", response.data.user);
+        commit("setUser", response.data);
         commit("authToken", response.data.token);
-        commit("setToken", response.data.token);
         this.$router.push({ name: "user" });
       })
       .catch(error => {
@@ -36,12 +28,12 @@ const actions = {
         password: user.password
       })
       .then(response => {
-        commit("setUser", response.data.user);
+        commit("setUser", response.data);
         commit("authToken", response.data.token);
-        commit("setToken", response.data.token);
         this.$router.push({ name: "user" });
       })
       .catch(error => {
+        console.log(error);
         commit("catchError", error);
       });
   },
@@ -59,7 +51,6 @@ const actions = {
           name: "password-success",
           params: { name: "forgot" }
         });
-        // state.authError = null;
       })
       .catch(error => {
         commit("catchError", error);
@@ -96,16 +87,20 @@ const actions = {
 
 // mutations
 const mutations = {
-  setUser(state, user) {
-    window.localStorage.setItem("user", JSON.stringify(user));
-  },
-  setToken(state, token) {
-    window.localStorage.setItem("token", token);
+  setUser(state, data) {
+    if (process.SERVER_BUILD) return;
+    window.localStorage.setItem("token", data.token);
+    window.localStorage.setItem("user", JSON.stringify(data.user));
+    Cookie.set("jwt", data.token);
+    Cookie.set("user", JSON.stringify(data.user));
   },
   unsetAll() {
-    window.localStorage.clear();
+    if (process.SERVER_BUILD) return;
+    window.localStorage.removeItem("token");
+    window.localStorage.removeItem("user");
+    Cookie.remove("jwt");
+    Cookie.remove("user");
     window.localStorage.setItem("logout", Date.now());
-    state.user = null;
   }
 };
 

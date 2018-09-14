@@ -2,12 +2,10 @@
   <div @mouseover="tip = true"
        @mouseleave="tip = false"
        @click="showComponent"
-       :style="{'background-color': activate || (tip && newComponent !== 'close') ? '#FFFFFF': (newComponent !== 'close'  ? 'rgba(255, 255, 255, 0.5)' : 'rgba(213, 71, 71, 1)')}"
-       :class="newComponent === 'close' ? 'icon-body-close' : 'icon-body'">
+       class="icon-body">
     <menu-tip v-if="tip && info.header.length > 0"
               :info="info" />
-    <icon :name="iconName" />
-
+    <img :src="icon" />
   </div>
 </template>
 <script>
@@ -17,7 +15,7 @@ export default {
     MenuTip: () => import('../ConferenceCall/MenuTips.vue')
   },
 
-  props: ['info', 'icon-name', 'current-component', 'new-component', 'modal'],
+  props: ['info', 'icon', 'current-component', 'new-component', 'modal'],
   data: () => ({
     tip: false,
     activate: false,
@@ -45,7 +43,7 @@ export default {
         this.$router.push({name: 'user'})
       } else {
         this.activate = !this.activate
-        this.activate === true ? this.$router.push({name: this.newComponent}) : this.$router.push({name: 'conference'})
+        this.activate ? this.$store.commit("confComponent", "videoConf") : this.$store.commit("confComponent", null)        
       }
     }
   }

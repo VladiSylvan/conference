@@ -21,7 +21,7 @@
             <div>
               <span>{{conference.name}}</span>
             </div>
-            <router-link :to="{name: 'conference-conference'}">enter now</router-link>
+            <router-link :to="{name: 'conference'}">enter now</router-link>
           </div>
         </div>
       </div>

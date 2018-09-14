@@ -1,7 +1,11 @@
 import axios from "axios";
 // initial state
 const state = {
-  confHistory: null
+  confHistory: null,
+  confViewers: null,
+  confComponent: null,
+  videoConf: false,
+  shareScreen: false
 };
 
 // getters
@@ -18,8 +22,8 @@ const actions = {
       })
       .then(response => {
         this.$router.push({
-          name: "conference-conference",
-          params: { conference: response.data.conference_uuid }
+          name: "conference",
+          query: { id: response.data.conference_uuid }
         });
       });
   },
@@ -30,17 +34,29 @@ const actions = {
         commit("setConferenceHistory", response.data);
       });
   },
-  postConferenceEmailInvite({ state, commit, rootState }, params) {
+  getConferenceViewers({ state, commit, rootState }, id) {
     axios
-      .post(rootState.api + "/conference/email_invite/" + params.conferenceId, {
-        emails: params.emails
-      })
+      .get(rootState.api + "/conference/conference_viewers/" + id)
       .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        commit("catchError", error);
+        state.confViewers = response.data;
       });
+  },
+  postConferenceEmailInvite({ state, commit, rootState }, params) {
+    return new Promise((resolve, reject) => {
+      axios
+        .post(
+          rootState.api + "/conference/email_invite/" + params.conferenceId,
+          {
+            emails: params.emails
+          }
+        )
+        .then(response => {
+          resolve();
+        })
+        .catch(error => {
+          commit("catchError", error);
+        });
+    });
   },
   postConferenceEmailInviteComfirmation({ state, commit, rootState }, token) {
     axios
@@ -90,6 +106,15 @@ const actions = {
 const mutations = {
   setConferenceHistory(state, history) {
     state.confHistory = history;
+  },
+  shareScreen(state, data) {
+    state.shareScreen = data;
+  },
+  videoConf(state, data) {
+    state.videoConf = data;
+  },
+  confComponent(state, data) {
+    state.confComponent = data;
   }
 };
 

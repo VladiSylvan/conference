@@ -8,7 +8,8 @@
              @click="index = index">
           <p @click="item.show = !item.show"
              class="title">{{item.name}}
-            <icon name="phone" />
+            <icon class="circle"
+                  name="angle-down" />
           </p>
           <p v-if="item.show === true"
              class="description">{{item.description}}</p>
@@ -88,6 +89,12 @@ export default {
   .header {
     margin-bottom: 33px !important;
   }
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #2565e8;
+  border-radius: 50%;
 }
 .title {
   cursor: pointer;

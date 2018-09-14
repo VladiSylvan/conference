@@ -4,31 +4,39 @@
     <div class="side-bar-container">
       <div @click="showTime"
            class="icon">
-        <icon name="clock-o"
-              :style="{ color: 'SideBarTime' == component ? '#2E7EED': '#C0C0C0'}"
-              scale="1.5" />
+        <img v-if="'SideBarTime' == component"
+             src="../../assets/conference page/clock selected.svg"
+             alt="">
+        <img v-else
+             src="../../assets/conference page/clock.svg"
+             alt="">
       </div>
       <div @click="showViewers"
            class="icon">
-        <icon name="user"
-              :style="{ color: 'SideBarViewers' == component ? '#2E7EED': '#C0C0C0'}"
-              scale="1.5" />
+        <img v-if="'SideBarViewers' == component"
+             src="../../assets/conference page/male selected.svg"
+             alt="">
+        <img v-else
+             src="../../assets/conference page/male.svg"
+             alt="">
       </div>
       <div class="icon"
            @click="showChat">
-        <icon name="comments"
-              :style="{ color: 'SideBarChat' == component ? '#2E7EED': '#C0C0C0'}"
-              scale="1.5" />
+        <img v-if="'SideBarChat' == component"
+             src="../../assets/conference page/chat selected.svg"
+             alt="">
+        <img v-else
+             src="../../assets/conference page/chat.svg"
+             alt="">
       </div>
       <div class="icon">
-        <icon name="question-circle"
-              scale="1.5" />
+        <img src="../../assets/conference page/questions-circular-button.svg"
+             alt="">
       </div>
       <div @click="showSettings"
-           :style="{ color: 'AudioSettings' == modalComponent ? '#2E7EED': '#C0C0C0'}"
            class="icon">
-        <icon name="cog"
-              scale="1.5" />
+        <img src="../../assets/conference page/settings.svg"
+             alt="">
       </div>
     </div>
     <transition name="fade">

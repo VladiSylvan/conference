@@ -15,7 +15,7 @@
           <img class="viewer-avatar"
                src="../../assets/ben-unsplash.jpg"
                alt="">
-          <span>{{viewer.name}}</span>
+          <span>{{viewer.first_name}} {{viewer.last_name}}</span>
         </div>
       </div>
     </div>
@@ -24,15 +24,14 @@
 
 <script>
 export default {
-  data: () => ({
-    viewers: [
-      {'name': 'Mark James'},
-      {'name': 'John Doe'},
-      {'name': 'Alisa Wonder'},
-      {'name': 'Mark James'},
-      {'name': 'Mark James'}
-    ]
-  })
+  created() {
+    this.$store.dispatch("getConferenceViewers", this.$route.query.id)
+  },
+  computed: {
+    viewers () {
+      return this.$store.state.conference.confViewers
+    }  
+  }
 }
 </script>
 

@@ -6,6 +6,9 @@
       <div class="login-header">
         <span>Forgot Password</span>
       </div>
+      <div class="login-body">
+        <span>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec torto urana.</span>
+      </div>
       <input v-model="email"
              v-validate="'required|email'"
              autocomplete='email'
@@ -15,13 +18,13 @@
              placeholder="Email">
       <span v-show="errors.has('email')"
             class="help is-danger">{{ errors.first('email') }}</span>
-      <div class="login-keep">
-        <router-link :to="{name: 'auth-login'}">Sign In</router-link>
-      </div>
-      <button type="submit">reset password</button>
+      <button type="submit">send</button>
       <span v-if="authError !== null"
             style="margin-top: 15px; margin-bottom: -15px"
             class="help is-danger">{{ authError }}</span>
+      <div class="login-keep">
+        <router-link :to="{name: 'auth-login'}">Sign In</router-link>
+      </div>
     </form>
   </div>
 </template>
@@ -63,33 +66,8 @@ export default {
     display: flex;
     flex-direction: column;
   }
-  .container .sign-in {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 32.16% !important;
-    display: flex;
-    flex-direction: column;
-  }
   .container .login input[type="text"] {
     width: calc(100% - 17px) !important;
-  }
-  .container .login input[type="password"] {
-    width: calc(100% - 17px) !important;
-  }
-  .container .login button {
-    width: 100% !important;
-  }
-  .container .line {
-    margin-right: 0 !important;
-  }
-  .container .sign-in .sign-up-button {
-    width: 100% !important;
-  }
-  .container .sign-in .facebook {
-    width: 100% !important;
-  }
-  .container .sign-in .google {
-    width: 100% !important;
   }
 }
 @media only screen and (max-width: 675px) {
@@ -110,41 +88,11 @@ export default {
     display: flex;
     flex-direction: column;
   }
-  .container .sign-in {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 77.78% !important;
-    display: flex;
-    flex-direction: column;
-  }
-  .container .line {
-    display: none !important;
-  }
-  .container .sign-in .google {
-    margin-bottom: 27px !important;
-  }
   .container .login input[type="text"] {
     width: calc(100% - 17px) !important;
   }
-  .container .login input[type="password"] {
-    width: calc(100% - 17px) !important;
-  }
   .container .login button {
     width: 100% !important;
-  }
-  .container .line {
-    margin-right: 0 !important;
-  }
-  .container .sign-in .sign-up-button {
-    width: 100% !important;
-  }
-  .container .sign-in .facebook {
-    width: 100% !important;
-  }
-  .container .sign-in .google {
-    width: 100% !important;
-  }
-  .container .login button {
     margin-bottom: 0px !important;
     margin-bottom: 27px !important;
   }
@@ -157,7 +105,7 @@ export default {
   width: fit-content;
   background-color: #ffffff;
   display: flex;
-  padding-bottom: 81px;
+  padding-bottom: 36px;
 }
 .container .line {
   margin-top: 16px;
@@ -174,12 +122,8 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.container .sign-in {
-  width: 280px;
-  display: flex;
-  flex-direction: column;
-}
 .container .login .login-header {
+  text-align: center;
   margin-top: 45px;
   margin-bottom: 20px;
   color: #878787;
@@ -199,18 +143,6 @@ export default {
   font-size: 14px;
   line-height: 16px;
 }
-.container .login input[type="password"] {
-  padding-left: 14px;
-  height: 42px;
-  width: 263px;
-  border: 1px solid #dddddd;
-  background-color: #ffffff;
-  margin-bottom: 15px;
-  color: #868686;
-  font-family: "Helvetica Neue";
-  font-size: 14px;
-  line-height: 16px;
-}
 .container .login .login-keep {
   display: flex;
   align-items: center;
@@ -219,12 +151,13 @@ export default {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
-  margin-bottom: 21px;
 }
 .container .login .login-keep input {
   margin-right: 7px;
 }
 .container .login button {
+  margin-top: 30px;
+  margin-bottom: 16px;
   height: 42px;
   width: 280px;
   background-color: #2e7eed;
@@ -234,5 +167,12 @@ export default {
   font-weight: bold;
   line-height: 15px;
   text-transform: uppercase;
+}
+.container .login .login-body {
+  margin-bottom: 35px;
+  color: #868686;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  line-height: 16px;
 }
 </style>

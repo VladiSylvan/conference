@@ -2,16 +2,25 @@
   <div class="container">
     <div class="login"
          v-if="$route.params.name === 'forgot'">
+      <p class="forgot-header">Successful</p>
+      <icon class="success"
+            name="check-circle" />
       <p>Password reset email has been sent</p>
     </div>
     <div class="login"
          v-else-if="$route.params.name === 'old-token'">
+      <icon class="not-success"
+            name="times-circle" />
       <p>The received token is incorrect</p>
+      <button @click="$router.push({name: 'auth-login'})">Login</button>
     </div>
     <div v-else
          class="login">
+      <p class="forgot-header">Successful</p>
+      <icon class="success"
+            name="check-circle" />
       <p>Password successfully reset</p>
-      <router-link :to="{name: 'auth-login'}">Login</router-link>
+      <button @click="$router.push({name: 'auth-login'})">Login</button>
     </div>
   </div>
 </template>
@@ -69,7 +78,6 @@ export default {
     flex-direction: column !important;
     align-items: center !important;
     margin-bottom: 4% !important;
-    padding-bottom: 0px !important;
   }
   .container .login {
     margin-left: 0 !important;
@@ -80,6 +88,8 @@ export default {
   }
 }
 .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 212px;
@@ -87,9 +97,11 @@ export default {
   width: fit-content;
   background-color: #ffffff;
   display: flex;
-  /* padding-bottom: 81px; */
 }
 .container .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   margin-left: 60px;
   margin-right: 60px;
@@ -98,11 +110,42 @@ export default {
   flex-direction: column;
 }
 .container .login p {
-  margin-bottom: 10px;
   color: #666666;
   font-family: "Helvetica Neue";
   font-size: 16px;
   font-weight: 500;
   line-height: 15px;
+}
+.forgot-header {
+  color: #878787;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 24px !important;
+  line-height: 29px;
+  margin-bottom: 25px;
+}
+.success {
+  width: 80px;
+  height: 80px;
+  color: #2e7eed;
+  margin-bottom: 25px;
+}
+.not-success {
+  width: 80px;
+  height: 80px;
+  color: #ed3b2e;
+  margin-bottom: 25px;
+}
+.container .login button {
+  margin-top: 25px;
+  height: 42px;
+  width: 280px;
+  background-color: #2e7eed;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  text-transform: uppercase;
 }
 </style>

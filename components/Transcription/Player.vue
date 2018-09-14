@@ -11,26 +11,26 @@
     </div>
     <div class="player-line desktop">
       <div class="player-progress"></div>
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 60%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 65%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 43%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 20%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 70%"
-            name="map-pin" />
+      <img class="map-pin-icon"
+           style="left: 60%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 65%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 43%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 20%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 70%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
     </div>
     <div class="player-actions desktop">
       <div class="public">
@@ -41,12 +41,14 @@
       </div>
       <div class="download">
         <span>download pdf</span>
-        <icon name="arrow-down" />
+        <img src="../../assets/transcription page/down-arrow.svg"
+             alt="">
       </div>
       <div @click="$emit('share')"
            class="share">
         <span>share</span>
-        <icon name="share" />
+        <img src="../../assets/transcription page/share-option.svg"
+             alt="">
       </div>
     </div>
 
@@ -77,26 +79,26 @@
     </div>
     <div class="player-line mobile">
       <div class="player-progress"></div>
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 60%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 65%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 43%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 20%"
-            name="map-pin" />
-      <icon class="map-pin-icon"
-            scale="1.5"
-            style="left: 70%"
-            name="map-pin" />
+      <img class="map-pin-icon"
+           style="left: 60%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 65%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 43%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 20%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
+      <img class="map-pin-icon"
+           style="left: 70%"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
     </div>
 
   </div>
@@ -208,7 +210,7 @@ export default {
 .map-pin-icon {
   position: absolute;
   color: #7ed321;
-  top: -24px;
+  top: -27px;
 }
 .player-actions {
   display: flex;

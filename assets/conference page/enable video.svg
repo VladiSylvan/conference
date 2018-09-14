@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>enable video</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Conference-Call-Page" transform="translate(-454.000000, -15.000000)">
+            <g id="header-conference">
+                <g id="actions" transform="translate(454.000000, 15.000000)">
+                    <g id="enable-video">
+                        <circle id="Oval" fill="#96BEF6" cx="15" cy="15" r="15"></circle>
+                        <g id="videocam-filled-tool" transform="translate(8.000000, 11.000000)" fill="#2E7EED" fill-rule="nonzero">
+                            <path d="M10.8888889,3.375 L10.8888889,0.75 C10.8888889,0.3 10.5777778,0 10.1111111,0 L0.777777778,0 C0.311111111,0 0,0.3 0,0.75 L0,8.25 C0,8.7 0.311111111,9 0.777777778,9 L10.1111111,9 C10.5777778,9 10.8888889,8.7 10.8888889,8.25 L10.8888889,5.625 L14,8.625 L14,0.375 L10.8888889,3.375 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,15 +1,14 @@
 <template>
   <div class="controls">
-    <icon class="undo"
-          name="undo"
-          scale="1.25" />
-    <icon name="play"
-          class="play"
-          scale="1.25" />
-    <icon name="undo"
-          scale="1.25"
-          class="undo"
-          flip="horizontal" />
+    <img class="undo"
+         src="../../assets/transcription page/refresh-arrow copy.svg"
+         alt="">
+    <img class="play"
+         src="../../assets/transcription page/play-button.svg"
+         alt="">
+    <img class="undo"
+         src="../../assets/transcription page/refresh-arrow.svg"
+         alt="">
     <div class="x">
       <span>1x</span>
     </div>

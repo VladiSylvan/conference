@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <img src="../../assets/ben-unsplash.jpg"
+    <img src="../../assets/homepage/img/woman-picture.jpg"
          class="image" />
     <div class="description">
       <div class="header">
         <div class="icon">
-          <icon name="phone"
-                scale="1.25" />
+          <img src="../../assets/homepage/icons/pin icon.svg"
+               alt="">
         </div>
         <p>Lorem Ipsum Dolor Set Mit</p>
       </div>
@@ -92,7 +92,6 @@ export default {
   margin-top: 55px;
   margin-right: 147px;
   max-width: 380px;
-  background-color: aquamarine;
   height: 453px;
 }
 .header {

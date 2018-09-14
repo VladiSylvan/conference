@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="28px" viewBox="0 0 26 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>mute</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Conference-Call-Page" transform="translate(-518.000000, -279.000000)" fill="#C6C6C6">
+            <g id="speakers" transform="translate(78.000000, 93.000000)">
+                <g id="speaker" transform="translate(298.000000, 45.000000)">
+                    <g id="mute" transform="translate(142.000000, 141.000000)">
+                        <text id="MUTE" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="9" font-weight="400">
+                            <tspan x="0" y="27">MUTE</tspan>
+                        </text>
+                        <g id="volume-up-interface-symbol" transform="translate(9.000000, 0.000000)" fill-rule="nonzero">
+                            <path d="M6.41668529,0 C6.25878935,0 6.122059,0.0626301555 6.00655809,0.187544825 L2.97141893,3.47372696 L0.583442407,3.47372696 C0.425354926,3.47372696 0.288656503,3.53635712 0.173219441,3.66120266 C0.0577504549,3.78618646 0,3.93429364 0,4.10531682 L0,7.89457948 C0,8.06563723 0.0577504549,8.21370985 0.173219441,8.33865909 C0.288752275,8.46367745 0.425482622,8.52623848 0.583442407,8.52623848 L2.97129123,8.52623848 L6.0064304,11.8125243 C6.12189938,11.9373007 6.25862973,12 6.41655759,12 C6.57464507,12 6.7113435,11.9373353 6.82678056,11.8125243 C6.94224955,11.6876096 7,11.5394333 7,11.3684793 L7,0.631693555 C7,0.460670371 6.94224955,0.312528623 6.82690826,0.187544825 C6.71137542,0.0626301555 6.57477277,0 6.41668529,0 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

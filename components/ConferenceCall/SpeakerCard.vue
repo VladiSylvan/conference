@@ -23,7 +23,8 @@
         </div>
         <div class="speaker-number">
           <div class="phone-icon">
-            <icon name="phone" />
+            <img src="../../assets/conference page/number.svg"
+                 alt="">
           </div>
           <span>{{user.number}}</span>
         </div>
@@ -31,22 +32,21 @@
       <div v-if="!mute"
            @click="mute = true"
            class="mute-speaker">
-        <icon class="volume-icon"
-              name="volume-off" />
-        <span>mute</span>
+        <img src="../../assets/conference page/mute speaker.svg"
+             alt="">
       </div>
       <div v-else
            @click="mute = false"
            class="unmute-speaker">
-        <icon class="volume-icon"
-              name="volume-up" />
-        <span>unmute</span>
+        <!-- <icon class="volume-icon"
+              name="volume-up" /> -->
+        <img src="../../assets/conference page/unmute speaker.svg"
+             alt="">
       </div>
       <div @click="$emit('before-remove-speaker', index)"
            class="remove-speaker">
-        <icon class="remove-icon"
-              name="times-circle" />
-        <span>remove</span>
+        <img src="../../assets/conference page/remove.svg"
+             alt="">
       </div>
     </div>
   </div>

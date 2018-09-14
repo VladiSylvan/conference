@@ -1,17 +1,24 @@
 <template>
   <div class="home">
     <div class="home-header">
-      <div @click="$router.push('/')"
+      <div v-if="!this.authPaths[this.$route.name]"
+           @click="$router.push({name: 'user'})"
            class="logo">
-        <div class="icon"></div>
-        <div class="dida-conference">
-          <span>Dida Conference</span>
-        </div>
+        <img class="icon"
+             src="../../assets/e-mail tamplates/logo.png"
+             alt="">
       </div>
-      <div v-if="($route.matched[0].name) === 'conference-conference'"
+      <div v-else
+           @click="$router.push({name: 'index'})"
+           class="logo">
+        <img class="icon"
+             src="../../assets/e-mail tamplates/logo.png"
+             alt="">
+      </div>
+      <div v-if="($route.matched[0].name) === 'conference'"
            class="header-icon desktop">
         <ConferenceCallButton :info="{'header': 'Video call', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}"
-                              icon-name="video-camera"
+                              :icon="videoCamera"
                               :current-component="component"
                               :modal="false"
                               new-component="VideoConference"
@@ -20,13 +27,14 @@
                               :key="button.id"
                               :modal="button.modal"
                               :info="button.info"
-                              :icon-name="button.icon_name"
+                              :icon="button.icon"
                               :current-component="component"
                               :new-component="button.component"
                               @show-action-tip="actionTip = !actionTip"
                               @show-component="showShedule = true, component = $event" />
       </div>
-      <div v-click-outside="outside"
+      <div v-if="!this.authPaths[this.$route.name]"
+           v-click-outside="outside"
            class="user">
         <div @click="showDropDown = !showDropDown"
              class="username">
@@ -83,7 +91,7 @@
       <div class="header-icon">
         <ConferenceCallButton class="video-mobile"
                               :info="{'header': 'Video call', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}"
-                              icon-name="video-camera"
+                              :icon="videoCamera"
                               :modal="false"
                               :current-component="component"
                               new-component="VideoConference"
@@ -93,7 +101,7 @@
                                 :modal="button.modal"
                                 :key="button.id"
                                 :info="button.info"
-                                :icon-name="button.icon_name"
+                                :icon="button.icon"
                                 :current-component="component"
                                 :new-component="button.component"
                                 @show-action-tip="actionTip = !actionTip"
@@ -129,19 +137,23 @@ export default {
     SharedItems: () => import('../ConferenceCall/SharedItems.vue')
   },
   data: () => ({
+    authPaths: {
+      'auth-signup': true, 'password-reset': true, 'password-confirmation': true, 'password-success': true, 'auth-login': true, index: true
+    },
     conferenceCallMenu: [
-      {modal: true, 'icon_name': 'clone', 'info': {'header': 'Share screen', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'ShareScreen'},
-      {modal: true, 'icon_name': 'file-text-o', 'info': {'header': 'Share File', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'ShareFileComponent'},
-      {modal: true, 'icon_name': 'user-plus', 'info': {'header': 'Add participant', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'AddParticipant'},
-      {modal: false, 'icon_name': 'microphone', 'info': {'header': 'Microphone', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': false},
-      {modal: false, 'icon_name': 'microphone-slash', 'info': {'header': 'Mute', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': false},
-      {modal: false, 'icon_name': 'lock', 'info': {'header': 'Lock Conference', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'lock-conference'},
-      {modal: false, 'icon_name': 'times', 'info': {'header': 'Close Conference', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'close'}
+      {modal: true, icon: require("../../assets/conference page/share screen.svg"), 'info': {'header': 'Share screen', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'ShareScreen'},
+      {modal: true, icon: require("../../assets/conference page/upload file.svg"), 'info': {'header': 'Share File', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'ShareFileComponent'},
+      {modal: true, icon: require("../../assets/conference page/invite user.svg"), 'info': {'header': 'Add participant', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'AddParticipant'},
+      {modal: false, icon: require("../../assets/conference page/record.svg"), 'info': {'header': 'Microphone', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': false},
+      {modal: false, icon: require("../../assets/conference page/mute.svg"), 'info': {'header': 'Mute', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': false},
+      {modal: false, icon: require("../../assets/conference page/lock.svg"), 'info': {'header': 'Lock Conference', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'lock-conference'},
+      {modal: false, icon: require("../../assets/conference page/leave.svg"), 'info': {'header': 'Close Conference', 'body': 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.'}, 'component': 'close'}
 
     ],
     showDropDown: false,
     showShedule: false,
     actionTip: false,
+    videoCamera: require("../../assets/conference page/enable video.svg"),
     component: ''
   }),
   methods: {
@@ -253,9 +265,8 @@ export default {
   height: 21px;
 }
 .home .icon {
-  height: 20px;
-  width: 21px;
-  background-color: white;
+  width: 153px;
+  height: 21px;
 }
 .home .dida-conference {
   margin-left: 10px;

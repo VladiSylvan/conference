@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="title">
-      <icon class="header-icon"
-            name="phone" />
-      <p>Dida Conference</p>
+      <img class="title"
+           src="../../assets/e-mail tamplates/logo.png"
+           alt="">
     </div>
     <div class="auth">
       <nuxt-link to="/auth/login"
@@ -66,6 +66,8 @@ export default {
   margin-right: auto;
 }
 .title {
+  width: 153px;
+  height: 21px;
   display: flex;
   color: #ffffff;
   font-family: "Acumin Pro";

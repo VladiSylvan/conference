@@ -1,9 +1,9 @@
 <template>
   <div class="marks-container">
     <div class="mark-header">
-      <icon class="map-pin-icon"
-            scale="1.25"
-            name="map-pin" />
+      <img class="map-pin-icon"
+           src="../../assets/transcription page/mark.svg"
+           alt="">
       <span>{{mark.name}}</span>
     </div>
     <div class="mark-body">

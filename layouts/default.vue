@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header-menu v-if="showHeader" />
+    <app-header-menu v-if="this.$route.name !== 'index'" />
     <nuxt/>
 
     <!-- <div class="dev-links desktopLink">
@@ -18,27 +18,14 @@ export default {
     AppHeaderMenu: () => import('../components/app/HeaderMenu.vue')
   },
   data: () => ({
-    component: '',
-    authPaths: {
-      'auth-signup': true, 'password-reset': true, 'password-confirmation': true, 'password-success': true, 'auth-login': true, index: true
-    }
+    component: ''
   }),
-  
+  mounted() {
+    this.$store.dispatch("nuxtClient") 
+  },
   methods: {
     outside () {
       this.showDropDown = false
-    }
-  },
-  watch: {
-    $route (el) {
-      if (this.authPaths[el.name] !== true ) {
-        this.$store.dispatch('getUserFromLocalStorage')
-      }
-    }
-  },
-  created () {
-    if (this.authPaths[this.$route.name] !== true ) {
-      this.$store.dispatch('getUserFromLocalStorage')
     }
   },
   computed: {

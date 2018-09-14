@@ -40,6 +40,9 @@ import "vue-awesome/icons/google-plus";
 import "vue-awesome/icons/backward";
 import "vue-awesome/icons/forward";
 import "vue-awesome/icons/retweet";
+import "vue-awesome/icons/angle-down";
+import "vue-awesome/icons/check-circle";
+
 import Icon from "vue-awesome/components/Icon";
 
 Vue.component("icon", Icon);

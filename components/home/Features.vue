@@ -5,7 +5,7 @@
       <div class="card"
            v-for="feature in features"
            :key="feature.index">
-        <feature-card />
+        <feature-card :feature-data="feature" />
       </div>
     </div>
   </div>
@@ -15,7 +15,17 @@
 export default {
   name: 'features',
     data: () => ({
-    features: [1,2,3,4,5,6,7,8,9]
+    features: [
+      {icon: require('../../assets/homepage/icons/support.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/telephone.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/agenda.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/password.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/2-monitors.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/file.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/support-2.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/microphone.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'},
+      {icon: require('../../assets/homepage/icons/contract.svg'), title: 'Web Conferences', content: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus'}
+      ]
   }),
   components: {
     featureCard: () => import('./FeatureCard.vue')
